@@ -1,4 +1,4 @@
-#land-name-div{
+#land-name-div {
     position: absolute;
     top: 0;
     left: 0;
@@ -9,22 +9,23 @@
     background-color: #131c21;
 }
 
-#remote-land{
+#remote-land {
     position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background: url('https://wallpapercave.com/wp/wp5406324.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
     height: 100%;
 }
 
 
-#local-land{
+#local-land {
     position: relative;
-    top: 0;
-    left: 0;
     margin: 16px;
     border-radius: 15px;
     width: 40%;
@@ -33,11 +34,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    opacity: 0.8;
 }
 
 
-#cover{
+#cover {
     margin-top: -4rem;
     position: absolute;
     height: 100%;
@@ -52,10 +54,11 @@
     color: aliceblue;
 }
 
-#connect-with-someone{
+#connect-with-someone {
     position: fixed;
 }
-#para{
+
+#para {
     position: relative;
     margin-top: 4rem;
 }
@@ -63,9 +66,10 @@
 
 
 /*main chat body*/
-#chat-cont{
+#chat-cont {
     background: url('https://wallpapercave.com/wp/wp5406324.jpg');
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     position: fixed;
     display: flex;
@@ -76,32 +80,34 @@
     z-index: 1;
 }
 
-#chat-bdy{
+#chat-bdy {
     position: fixed;
     height: 90%;
     width: 90%;
     top: 2rem;
-    
+
     background-color: #1f1f1f;
 }
 
-#chat-nav{
+#chat-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
     background: linear-gradient(30deg, #0a0a0a, #0a0a0a)
 }
-#chat-name{
+
+#chat-name {
     padding: 1rem;
     color: rgb(255, 255, 255);
 }
-#chat-upgrade{
-    position: relative;
-    margin-top: -4.8rem;
-    padding: 1rem;  
-    float: right;
+
+#chat-upgrade {
+    padding: 1rem;
 }
 
-#chat-control{
+#chat-control {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -110,7 +116,7 @@
     justify-content: center;
 }
 
-#chat-msg{
+#chat-msg {
     z-index: 1;
     margin-left: 3rem;
     width: 75%;
@@ -118,13 +124,14 @@
     word-break: break-word;
     margin-bottom: 2rem;
 }
-#chat-send{
+
+#chat-send {
     margin-bottom: 2rem;
     z-index: 1;
     padding: 0 1.3rem 0 1.3rem;
 }
 
-#chat-target{
+#chat-target {
     position: absolute;
     height: 78%;
     width: 100%;
@@ -188,7 +195,7 @@
     overflow: auto;
 }
 
-#video-call-div{
+#video-call-div {
     position: absolute;
     top: 0;
     left: 0;
@@ -198,7 +205,7 @@
     display: none;
 }
 
-#local-video{
+#local-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -210,14 +217,14 @@
     z-index: 2;
 }
 
-#remote-video{
+#remote-video {
     background-color: #000000;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
 
-.call-action-div{
+.call-action-div {
     text-align: center;
     position: absolute;
     bottom: 0px;
@@ -226,35 +233,38 @@
     z-index: 1;
 }
 
-button{
+button {
     cursor: pointer;
     border: none;
 }
 
-button:hover{
+button:hover {
     background-color: #454545;
     color: #f2f2f2;
 }
 
-button a{
+button a {
     color: black;
     padding: 1rem;
 }
 
-button a:hover{
+button a:hover {
     color: #f2f2f2;
 }
 
-#mute-audio{
+#mute-audio {
     color: red;
 }
-#mute-video{
+
+#mute-video {
     color: blue;
 }
-#end-call{
+
+#end-call {
     color: #a00404;
 }
-#end-call:hover{
+
+#end-call:hover {
     background-color: #b33b3b;
 }
 
@@ -404,6 +414,188 @@ button a:hover{
     }
 }
 
-#reconnect{
+#reconnect {
     display: none;
+}
+
+
+@media screen and (max-width: 300px) {
+    #local-land {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    #land-name {
+        width: 70%;
+    }
+
+    #chat-bdy {
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #local-land {
+        height: 30%;
+        width: 70%;
+    }
+
+    #cover {
+        height: 100%;
+        top: 40px;
+    }
+
+    #chat-control {
+        width: 90%;
+    }
+
+    .msg-main {
+        margin-right: 15rem;
+        width: 70%;
+    }
+
+    .msg-remote-main {
+        margin-left: 15rem;
+        width: 70%;
+    }
+    #chat-target{
+        height: 60%;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    #local-land {
+        height: 30%;
+        width: 70%;
+    }
+
+    #cover {
+        height: 100%;
+        top: 60px;
+    }
+
+    #chat-control {
+        width: 90%;
+    }
+
+    .msg-main {
+        margin-right: 15rem;
+        width: 70%;
+    }
+
+    .msg-remote-main {
+        margin-left: 15rem;
+        width: 70%;
+    }
+    #chat-target{
+        height: 60%;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+    #local-land {
+        height: 30%;
+        width: 70%;
+    }
+
+    #cover {
+        height: 100%;
+        top: 60px;
+    }
+
+    #chat-control {
+        width: 90%;
+    }
+
+    .msg-main {
+        margin-right: 15rem;
+        width: 70%;
+    }
+
+    .msg-remote-main {
+        margin-left: 15rem;
+        width: 70%;
+    }
+    #chat-target{
+        height: 60%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #local-land {
+        height: 30%;
+        width: 70%;
+    }
+    #chat-control {
+        width: 90%;
+    }
+
+    .msg-main {
+        margin-right: 15rem;
+        width: 70%;
+    }
+
+    .msg-remote-main {
+        margin-left: 15rem;
+        width: 70%;
+    }
+    #chat-target{
+        height: 80%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+    #local-land {
+        height: 30%;
+        width: 70%;
+    }
+    #chat-control {
+        width: 90%;
+    }
+
+    .msg-main {
+        margin-right: 15rem;
+        width: 70%;
+    }
+
+    .msg-remote-main {
+        margin-left: 15rem;
+        width: 70%;
+    }
+    #chat-target{
+        height: 65%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #local-land {
+        height: 30%;
+        width: 70%;
+    }
+    #chat-control {
+        width: 90%;
+    }
+
+    .msg-main {
+        margin-right: 15rem;
+        width: 70%;
+    }
+
+    .msg-remote-main {
+        margin-left: 15rem;
+        width: 70%;
+    }
+    #chat-target{
+        height: 65%;
+    }
 }
